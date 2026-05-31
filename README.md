@@ -12,11 +12,21 @@ To write a **NumPy** program that sorts the elements in each column of a given 2
 5. **Display Output**: Print the original array and the column-wise sorted array.
 
 ## 🧾 Program
-Add code here
-
+```
+import numpy as np
+array = np.array([[7, 67, 87],
+                [43, 54, 98],
+                [78, 8, 9]])
+sorted_array = np.sort(array, axis=0)
+print("Original array:\n", array)
+print("Column-wise sorted array:\n", sorted_array)
+```
 ## Output
 
+<img width="1913" height="1016" alt="image" src="https://github.com/user-attachments/assets/0a1fb717-7d02-4408-9157-c41423971d75" />
+
 ## Result
+Thus,the program is executed sucessfully
 
 # # NumPy Program: Find Indices Where Elements in Array x are Greater Than or Equal to Corresponding Elements in Array y
 
@@ -33,13 +43,20 @@ To write a Python program using **NumPy** that finds the indices where elements 
 5. **Print Indices**: Print the indices where the condition holds true.
 
 ## 🧾 Program
-
-Add code here
+```
+import numpy as np
+x = np.array([1, 30, 54, 70, 22])
+y = np.array([2, 7, 80, 11, 45])
+indices = np.where(x >= y)
+print("Indices where x >= y:", indices[0])
+```
 
 ## Output
 
-## Result
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/57124ea4-f281-47bf-ae07-c12d373bcb02" />
 
+## Result
+Thus,the program is executed sucessfully
 
 # NumPy Program: Replace the Second Column in a 2D Array
 
@@ -54,12 +71,23 @@ To write a **NumPy** program that deletes the second column from a given 2D arra
 5. **Display Result**: Print the updated array with the replaced column.
 
 ## 🧾 Program
+```
 
-Add code here
-
+import numpy as np
+a = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+new_col = np.array([10, 11, 12])
+a = np.delete(a, 1, axis=1)
+a = np.insert(a, 1, new_col, axis=1)
+print("Updated array:\n", a)
+```
 ## Output
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/ff3f73d7-a02f-4b90-be77-d9cfc80cf0db" />
+
 ## Result
+Thus,the program is executed sucessfully
 
 # Pandas Program: Create and Display a DataFrame with Custom Index Labels
 
@@ -80,11 +108,26 @@ To create and display a **DataFrame** using the **Pandas** library in Python fro
 ---
 
 ## 💻 Program
-Add code here
+```
+import pandas as pd
+import numpy as np
+exam_data = {
+    'name': ['Anthony', 'Diana', 'Kate', 'Jake', 'Emma', 'Matthew', 'Diya', 'Tara', 'Riya'],
+    'score': [23.6,45.1,34,23.2,43,54.6,23,23.5,12.0],
+    'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2],
+    'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'yes', 'no']
+}
+labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+df = pd.DataFrame(exam_data, index=labels)
+print(df)
+```
 
 ## Output
 
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/2199d27e-a4c4-4c6c-90e0-762384f5313a" />
+
 ## Result
+Thus,the program is executed sucessfully
 
 # 🧪 Pandas Program: Join Two DataFrames Along Rows
 
@@ -105,9 +148,26 @@ To write a Python program using Pandas to **join two DataFrames along rows** (ro
 ---
 
 ## 💻 Program
-
-Add code here
-
+```
+import pandas as pd
+student_data1 = {
+    'StudentID': [1, 2, 3],
+    'Name': ['Maya', 'Clara', 'Rita'],
+    'Grade': ['A', 'B', 'C']
+}
+student_data2 = {
+    'StudentID': [4, 5, 6],
+    'Name': ['Harry', 'Emma', 'Ron'],
+    'Grade': ['B', 'A', 'C']
+}
+df1 = pd.DataFrame(student_data1)
+df2 = pd.DataFrame(student_data2)
+combined_df = pd.concat([df1, df2], axis=0)
+print(combined_df)
+```
 ## Output
 
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/06aadc66-159d-4e93-903f-7d3ccf104459" />
+
 ## Result
+Thus,the program is executed sucessfully
